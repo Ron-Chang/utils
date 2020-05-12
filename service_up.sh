@@ -1,5 +1,5 @@
 CURRENT_DIR=$(pwd)
-USER="`whoami`"
-cd "/Users/${USER}/spyder_platform_service"
+USER="ubuntu"
+cd "/home/${USER}/service_centre"
 docker-compose up -d
 cd "${CURRENT_DIR}"
