@@ -17,10 +17,10 @@ fi
 echo "\nPROJECT: [$PROJECT_NAME] | BRANCH: [$PROJECT_BRANCH] -> [$DEV]"; git pull
 
 cd "$CURRENT_LOCATION/$SUBMODULE_PATH"
-if [[ $SUBMODULE_BRANCH != $BRANCH ]]
+if [[ $SUBMODULE_BRANCH != $DEV ]]
 then
-    git checkout $BRANCH
+    git checkout $DEV
 fi
-echo "\nSUBMODULE: [$SUBMODULE_NAME] BRANCH: [$SUBMODULE_BRANCH] -> [$BRANCH]"; git pull
+echo "\nSUBMODULE: [$SUBMODULE_NAME] BRANCH: [$SUBMODULE_BRANCH] -> [$DEV]"; git pull
 
 cd $CURRENT_LOCATION
