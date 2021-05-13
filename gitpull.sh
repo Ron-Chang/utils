@@ -23,4 +23,8 @@
 #echo "\nSUBMODULE: [$SUBMODULE_NAME] BRANCH: [$SUBMODULE_BRANCH] -> [$DEV]"; git pull
 
 #cd $CURRENT_LOCATION
+
+#PREFIX=`basename $PWD | awk -F'_' '{print $1}'`
+#echo $PREFIX
+
 git pull; git config --file .gitmodules --get-regexp path | awk '{ print $2 }' | xargs -I@ git -C @ pull
